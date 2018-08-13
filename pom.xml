@@ -35,6 +35,21 @@
       <artifactId>fastjson</artifactId>
       <version>1.2.15</version>
     </dependency>
+    <dependency>
+      <groupId>com.liumapp.qtools.http</groupId>
+      <artifactId>qtools-http</artifactId>
+      <version>v1.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>1.7.25</version>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-nop</artifactId>
+      <version>1.7.2</version>
+    </dependency>
   </dependencies>
 
   <build>
