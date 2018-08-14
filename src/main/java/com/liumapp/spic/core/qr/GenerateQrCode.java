@@ -5,7 +5,6 @@ import com.alibaba.fastjson.JSONObject;
 import com.liumapp.qtools.http.HttpTool;
 import com.liumapp.spic.core.job.JobDetail;
 import com.liumapp.spic.core.qr.require.GenerateQrCodeRequire;
-import com.liumapp.spic.core.status.Status;
 import org.apache.http.HttpResponse;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
@@ -49,10 +48,10 @@ public class GenerateQrCode extends JobDetail <GenerateQrCodeRequire> {
             String res = EntityUtils.toString(response.getEntity());
             JSONObject res_obj = JSON.parseObject(res);
             Integer status = res_obj.getInteger("status");
-            if (status.equals(Status.SUCCESS.getValue())) {
+            if (status.equals(10001)) {
                 this.jobResult.put("msg", "success");
                 this.jobResult.put("content", res_obj.get("content"));
-            } else if (status.equals(Status.AUTH_FAILED.getValue())) {
+            } else if (status.equals(10003)) {
                 this.jobResult.put("msg", "权限认证失败，请检查appid与appkey是否正确");
             } else {
                 this.jobResult.put("msg", "生成二维码失败");

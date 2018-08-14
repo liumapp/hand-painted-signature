@@ -27,7 +27,7 @@ public class SpicCoreTest extends TestCase {
         GenerateQrCodeRequire generateQrCodeRequire = new GenerateQrCodeRequire();
         generateQrCodeRequire.setAppId("test_app_id")
                 .setAppSecret("test_app_secret")
-                .setHost("https://localhost:3030")
+                .setHost("http://localhost:3030")
                 .setPath("/qr/generate");
         JSONObject object = spicCore.doJob(generateQrCode, generateQrCodeRequire);
         Base64FileTool.saveBase64File(object.get("content").toString(), savepath + "qr.jpg");
