@@ -14,7 +14,7 @@ public class SpicCoreTest extends TestCase {
 
     @Test
     public void testGenerateQr () {
-        
+
     }
 
 
