@@ -48,10 +48,11 @@ public class GenerateQrCode extends JobDetail <GenerateQrCodeRequire> {
                     bodys);
             String res = EntityUtils.toString(response.getEntity());
             JSONObject res_obj = JSON.parseObject(res);
-            if (res_obj.get("status").toString().equals(Status.SUCCESS.getValue())) {
+            Integer status = res_obj.getInteger("status");
+            if (status.equals(Status.SUCCESS.getValue())) {
                 this.jobResult.put("msg", "success");
                 this.jobResult.put("content", res_obj.get("content"));
-            } else if (res_obj.get("status").toString().equals(Status.AUTH_FAILED.getValue())) {
+            } else if (status.equals(Status.AUTH_FAILED.getValue())) {
                 this.jobResult.put("msg", "权限认证失败，请检查appid与appkey是否正确");
             } else {
                 this.jobResult.put("msg", "生成二维码失败");
