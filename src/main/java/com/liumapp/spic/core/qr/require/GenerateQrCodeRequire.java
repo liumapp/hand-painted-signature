@@ -40,4 +40,40 @@ public class GenerateQrCodeRequire extends JobData {
         result += encryptUtil.encode(this.appSecret);
         return result;
     }
+
+    public String getHost() {
+        return host;
+    }
+
+    public GenerateQrCodeRequire setHost(String host) {
+        this.host = host;
+        return this;
+    }
+
+    public String getPath() {
+        return path;
+    }
+
+    public GenerateQrCodeRequire setPath(String path) {
+        this.path = path;
+        return this;
+    }
+
+    public String getAppId() {
+        return appId;
+    }
+
+    public GenerateQrCodeRequire setAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+
+    public String getAppSecret() {
+        return appSecret;
+    }
+
+    public GenerateQrCodeRequire setAppSecret(String appSecret) {
+        this.appSecret = appSecret;
+        return this;
+    }
 }
