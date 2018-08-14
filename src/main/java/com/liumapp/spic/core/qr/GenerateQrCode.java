@@ -26,6 +26,7 @@ public class GenerateQrCode extends JobDetail <GenerateQrCodeRequire> {
 
     @Override
     public JSONObject handle(GenerateQrCodeRequire data) {
+
         return null;
     }
 

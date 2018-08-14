@@ -41,6 +41,11 @@
       <version>v1.0.0</version>
     </dependency>
     <dependency>
+      <groupId>com.liumapp.qtools.security.encrypt</groupId>
+      <artifactId>qtools-security-encrypt</artifactId>
+      <version>v1.0.0</version>
+    </dependency>
+    <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
       <version>1.7.25</version>
