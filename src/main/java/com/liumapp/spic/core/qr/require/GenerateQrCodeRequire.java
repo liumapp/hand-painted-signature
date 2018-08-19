@@ -22,14 +22,26 @@ public class GenerateQrCodeRequire extends JobData {
 
     private String appSecret;
 
+    private String returnUrl;
+
     public GenerateQrCodeRequire() {
     }
 
-    public GenerateQrCodeRequire(String host, String path, String appId, String appSecret) {
+    public GenerateQrCodeRequire(String host, String path, String appId, String appSecret, String returnUrl) {
         this.host = host;
         this.path = path;
         this.appId = appId;
         this.appSecret = appSecret;
+        this.returnUrl = returnUrl;
+    }
+
+    public String getReturnUrl() {
+        return returnUrl;
+    }
+
+    public GenerateQrCodeRequire setReturnUrl(String returnUrl) {
+        this.returnUrl = returnUrl;
+        return this;
     }
 
     public String getAppCode () throws Exception {
