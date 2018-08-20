@@ -1,5 +1,9 @@
 package com.liumapp.spic.server.controller;
 
+import com.liumapp.spic.server.pattern.ReturnPicPattern;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,9 +18,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("returnurl")
 public class ReturnUrlController {
 
-    @RequestMapping("/getpic")
-    public void getReturnPic () {
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
+    @RequestMapping("/getpic")
+    public void getReturnPic (@RequestBody ReturnPicPattern returnPicPattern) {
+        logger.info("get return info : " + returnPicPattern);
+        //save your signed pic here
+        //and do something you like
+        // :)
     }
 
 }
