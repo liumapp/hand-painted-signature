@@ -25,7 +25,7 @@
 
   <modules>
     <module>core</module>
-    <module>hand-painted-signature-server</module>
+    <module>server</module>
   </modules>
 
 </project>
