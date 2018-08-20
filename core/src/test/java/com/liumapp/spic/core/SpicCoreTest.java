@@ -28,7 +28,7 @@ public class SpicCoreTest extends TestCase {
         generateQrCodeRequire.setAppId("test_app_id")
                 .setAppSecret("test_app_secret")
                 .setHost("http://localhost:3030")
-                .setReturnUrl("${your_return_url}")
+                .setReturnUrl("http://localhost:7070/returnurl/getpic") //您获取签名图片的通知回调地址 请勿添加任何形式的参数（不能带有? & =等符号）
                 .setPath("/qr/generate");
         JSONObject object = spicCore.doJob(generateQrCode, generateQrCodeRequire);
         Base64FileTool.saveBase64File(object.get("content").toString(), savepath + "qr.jpg");
