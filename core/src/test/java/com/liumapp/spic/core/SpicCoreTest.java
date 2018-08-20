@@ -18,7 +18,7 @@ import java.io.IOException;
  */
 public class SpicCoreTest extends TestCase {
 
-    private String savepath = "/usr/local/tomcat/project/hand-painted-signature-core/data/";
+    private String savepath = "/usr/local/tomcat/project/hand-painted-signature/core/data/";
 
     @Test
     public void testGenerateQr () throws IOException {
