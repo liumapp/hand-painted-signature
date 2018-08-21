@@ -22,7 +22,7 @@ public class ReturnUrlController {
 
     @RequestMapping("/getpic")
     public void getReturnPic (@RequestBody ReturnPicPattern returnPicPattern) {
-        logger.info("get return info : " + returnPicPattern);
+        logger.info("get return info : " + returnPicPattern.toString());
         //save your signed pic here
         //and do something you like
         // :)

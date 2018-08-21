@@ -9,8 +9,10 @@ package com.liumapp.spic.server.pattern;
  */
 public class ReturnPicPattern {
 
+    //手绘签名图片的base64
     private String base64Pic;
 
+    //图片picNo
     private String picNo;
 
     public ReturnPicPattern() {
@@ -37,6 +39,14 @@ public class ReturnPicPattern {
     public ReturnPicPattern setPicNo(String picNo) {
         this.picNo = picNo;
         return this;
+    }
+
+    @Override
+    public String toString() {
+        return "ReturnPicPattern{" +
+                "base64Pic='" + base64Pic + '\'' +
+                ", picNo='" + picNo + '\'' +
+                '}';
     }
 }
 
