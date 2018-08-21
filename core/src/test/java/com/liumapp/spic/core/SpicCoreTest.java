@@ -31,7 +31,8 @@ public class SpicCoreTest extends TestCase {
                 .setReturnUrl("http://localhost:7070/returnurl/getpic") //您获取签名图片的通知回调地址 请勿添加任何形式的参数（不能带有? & =等符号）
                 .setPath("/qr/generate");
         JSONObject object = spicCore.doJob(generateQrCode, generateQrCodeRequire);
-        Base64FileTool.saveBase64File(object.get("content").toString(), savepath + "qr.jpg");
+        Base64FileTool.saveBase64File(object.get("content").toString(), savepath + "qr.jpg");//存储二维码图片到本地
+        System.out.println("your picNo is : " + object.get("picNo").toString());//签名图片唯一标识
     }
 
 
