@@ -37,6 +37,7 @@ public class GenerateQrCode extends JobDetail <GenerateQrCodeRequire> {
         JSONObject object = new JSONObject();
         try {
             object.put("code", data.getAppCode());
+            object.put("returnUrl", data.getReturnUrl());
             String bodys = object.toJSONString();
             headers.put("Content-Type", "application/json");
             HttpResponse response = httpTool.doPost(data.getHost(),
@@ -54,7 +55,7 @@ public class GenerateQrCode extends JobDetail <GenerateQrCodeRequire> {
             } else if (status.equals(10003)) {
                 this.jobResult.put("msg", "权限认证失败，请检查appid与appkey是否正确");
             } else {
-                this.jobResult.put("msg", "生成二维码失败");
+                this.jobResult.put("msg", res_obj.get("msg").toString());
             }
         } catch (Exception e) {
             logger.error(e.getMessage());
